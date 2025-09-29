@@ -25,6 +25,7 @@ body {
 .page {
   background-color: #e1e1e1;
   color: #242424;
+  font-family: sans-serif;
 }
 
 
@@ -49,6 +50,30 @@ svg {
   max-width: 1170px;
   padding: 0 12px;
   margin: 0 auto;
+  border: 1px solid greenyellow;
+}
+
+
+.btn {
+  line-height: 28px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline {
+  color: #0A143A;
+  background-color: transparent;
+
+}
+.btn-primary {
+  color: #fff;
+  background-color: #256EEB;
+  background: #256eeb;
+  border-radius: 5px;
 }
 
 
@@ -57,23 +82,57 @@ svg {
 }
 
 .header-box {
-  display: flex;
   width: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.header-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-logo span {
+  line-height: 28px;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #0A143A;
+}
 
 
+.header-burger {
+  width: 30px;
+  height: 19px;
+  display: none;
+}
 
 @media (width <= 1200px) {
   .container {
     max-width: 930px;
+    border: 1px solid orangered;
+  }
+}
+
+@media (width <= 991px) {
+  .container {
+    max-width: 730px;
+    border: 1px solid orange;
   }
 }
 
 @media (width <= 786px) {
   .container {
-    max-width: 730px;
+    border: 1px solid lawngreen;
+    width: 100%;
+  }
+  .header-burger {
+    display: block;
+  }
+  .header-controls {
+    display: none;
   }
 }
