@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/logo-icon-box.svg" type="image/svg+xml">
   <link rel="shortcut icon" href="img/logo-favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/img/favicon.ico" />
   <link href="styles/style.css" rel="stylesheet">
   <title>Abito</title>
 </head>
@@ -13,10 +14,10 @@
   <header class="header">
     <div class="container">
       <div class="header-box">
-        <div class="header-logo">
+        <a class="header-logo" href="/">
           <img src="img/logo-svg.svg" alt="logo">
-          <span>Abito</span>
-        </div>
+          <h1 class="header-title visually-hidden">Abito</h1>
+        </a>
 
         <div class="header-controls">
           <button class="btn btn-outline">Вход и регистрация</button>
@@ -24,7 +25,9 @@
         </div>
 
         <div class="header-burger header-controls-mobile">
-          <img src="img/burger-menu.svg" alt="burger">
+          <button class="header-burger__btn">
+            <img src="img/burger-menu.svg" alt="burger">
+          </button>
         </div>
       </div>
     </div>
@@ -35,11 +38,13 @@
     <section class="search">
       <div class="container">
         <div class="search-box">
-          <input class="search-input" type="text" placeholder="Поиск по объявлениям">
-          <button class="btn btn-primary search-btn">
-            <img class="search-btn__icon" src="img/looking-glass.svg" alt="looking-glass">
-            <span class="search-btn__text">Найти</span>
-          </button>
+          <form class="search-form" method="get" action="/">
+            <input name="search"  class="search-input" type="text" placeholder="Поиск по объявлениям">
+            <button class="btn btn-primary search-btn" type="submit">
+              <img class="search-btn__icon" src="img/looking-glass.svg" alt="looking-glass">
+              <span class="search-btn__text">Найти</span>
+            </button>
+          </form>
         </div>
       </div>
     </section>
